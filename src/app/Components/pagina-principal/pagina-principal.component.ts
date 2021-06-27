@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
+import { ControlVacunasService } from 'src/app/Services/ControlVacunasService/control-vacunas.service';
 
 @Component({
   selector: 'app-pagina-principal',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaPrincipalComponent implements OnInit {
 
-  constructor() { }
+  @HostBinding('class') classes='row';
+  vista: any=[];
 
-  ngOnInit(): void {
+  constructor(private _controlVacunasService: ControlVacunasService) { }
+
+  ngOnInit(){
+    this._controlVacunasService.getAll().subscribe(
+      resp => {
+        this.vista = resp;
+      },
+      err => console.log(err)
+    );
   }
-
 }

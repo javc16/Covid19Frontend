@@ -1,1 +1,17 @@
-<p>pagina-principal works!</p>
+<div class="col-md-4" *ngFor="let vista of vista">
+    <br><br>
+  <div class="card text-center">
+    <div class="card-header bg-dark text-white text-center d-flex justify-content-between align-items-center">
+      {{vista.empresa}}
+    </div>
+    <img [src]='vista.image' class="card-img-top">
+    <div class="card-body">
+        <p>Nombre: {{vista.ciudadano.nombre}} </p>
+        <p>Apellidos: {{vista.ciudadano.apellido}} </p>
+      <p>Direccion: {{vista.direccion.ciudad}} </p>
+      <p>Telefono: {{vista.ciudadano.telefono}} </p>
+      <p>Se puso la dosis 1: {{vista.primeraDosis}} </p>
+      <p>Se puso la dosis 2: {{vista.segundaDosis}} </p>
+    </div>
+  </div>
+  </div>

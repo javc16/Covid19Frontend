@@ -1,0 +1,57 @@
+<br>
+<br>
+<h1>Agregar Ciudadano</h1>
+<form name="myForm">
+    <div class="form-group">
+        <mat-label>Ingrese el Nombre: </mat-label>
+        <tr></tr>
+        <input id="Nombre" name="Nombre" type="text" class="form-control" [(ngModel)]="ciudadano.nombre">
+    </div>
+
+    <div class="form-group">
+        <mat-label>Ingrese el Apellido: </mat-label>
+        <tr></tr>
+        <input id="Apellido" name="Apellido" type="text" class="form-control" [(ngModel)]="ciudadano.apellido">
+    </div>
+
+    <div class="form-group">
+        <mat-label>Ingrese la identidad: </mat-label>
+        <tr></tr>
+        <input id="Identidad" name="Identidad" type="text" class="form-control" [(ngModel)]="ciudadano.numeroIdentidad">
+    </div>
+
+    <div class="form-group">
+        <mat-label>Ingrese el numero telefonico: </mat-label>
+        <tr></tr>
+        <input id="Telefono" name="Telefono" type="text" class="form-control" [(ngModel)]="ciudadano.telefono">
+    </div>
+
+    <div class="form-group">
+        <mat-label>Ingrese la fecha de nacimiento: </mat-label>
+        <tr></tr>
+        <input id="FechaNacimiento" name="FechaNacimiento" type="date" class="form-control" [(ngModel)]="ciudadano.fechaNacimiento">
+    </div>
+
+    <div class="form-group">
+        <mat-label>Ingrese la edad: </mat-label>
+        <tr></tr>
+        <input id="Edad" name="Edad" type="number" class="form-control" [(ngModel)]="ciudadano.edad">
+    </div>
+    
+
+</form>
+<br>
+<br>
+
+<mat-card-actions>
+
+
+    <button mat-raised-button color="warn" mattooltip="df" type="submit" (click)="cancel()" style="margin-right: 10px;">
+        <i class='fa fa-times fa-fw'></i> Cancel
+    </button>
+
+    <button mat-raised-button color="accent" class="marginButton" mattooltip="df" type="submit"
+        (click)="crearProductOwner()">
+        <i class='fa fa-save fa-fw'></i> Save
+    </button>
+</mat-card-actions>

@@ -1,0 +1,41 @@
+<p>crear-direccion works!</p>
+<br>
+<br>
+<h1>Agregar Direccion de Vacunacion</h1>
+<form name="myForm">
+    <div class="form-group">
+        <mat-label>Ingrese la ciudad: </mat-label>
+        <tr></tr>
+        <input id="Ciudad" name="Ciudad" type="text" class="form-control" [(ngModel)]="direccion.ciudad">
+    </div>
+
+    <div class="form-group">
+        <mat-label>Ingrese la colonia: </mat-label>
+        <tr></tr>
+        <input id="Colonia" name="Colonia" type="text" class="form-control" [(ngModel)]="direccion.colonia">
+    </div>
+
+    <div class="form-group">
+        <mat-label>Ingrese el centro de vacunacion: </mat-label>
+        <tr></tr>
+        <input id="CentroVacunacion" name="CentroVacunacion" type="text" class="form-control" [(ngModel)]="direccion.centroVacunacion">
+    </div> 
+    
+
+</form>
+<br>
+<br>
+
+<mat-card-actions>
+
+
+    <button mat-raised-button color="warn" mattooltip="df" type="submit" (click)="cancel()" style="margin-right: 10px;">
+        <i class='fa fa-times fa-fw'></i> Cancel
+    </button>
+
+    <button mat-raised-button color="accent" class="marginButton" mattooltip="df" type="submit"
+        (click)="crearProductOwner()">
+        <i class='fa fa-save fa-fw'></i> Save
+    </button>
+</mat-card-actions>
+

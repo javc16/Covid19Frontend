@@ -22,6 +22,6 @@ export class ControlVacunasComponent implements OnInit {
   }
 
   create(): void {
-    this.router.navigate(['']);
+    this.router.navigate(['crearcontrolvacunas']);
   }
 }

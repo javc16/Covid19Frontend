@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CiudadanoComponent } from './Components/ciudadano/ciudadano.component';
 import { CrearCiudadanoComponent } from './Components/ciudadano/crear-ciudadano/crear-ciudadano.component';
 import { ControlVacunasComponent } from './Components/control-vacunas/control-vacunas.component';
+import { CrearControlVacunasComponent } from './Components/control-vacunas/crear-control-vacunas/crear-control-vacunas.component';
 import { CrearDireccionComponent } from './Components/direccion/crear-direccion/crear-direccion.component';
 import { DireccionComponent } from './Components/direccion/direccion.component';
 import { PaginaPrincipalComponent } from './Components/pagina-principal/pagina-principal.component';
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'controlvacunas',
     component: ControlVacunasComponent,    
+  },
+  {
+    path: 'crearcontrolvacunas',
+    component: CrearControlVacunasComponent,    
   },
   {
     path: '',

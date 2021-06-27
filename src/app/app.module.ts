@@ -13,6 +13,9 @@ import { ControlVacunasComponent } from './Components/control-vacunas/control-va
 import { PaginaPrincipalComponent } from './Components/pagina-principal/pagina-principal.component';
 import { CrearCiudadanoComponent } from './Components/ciudadano/crear-ciudadano/crear-ciudadano.component';
 import { CrearDireccionComponent } from './Components/direccion/crear-direccion/crear-direccion.component';
+import { CrearControlVacunasComponent } from './Components/control-vacunas/crear-control-vacunas/crear-control-vacunas.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
+import { FooterComponent } from './Components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,10 @@ import { CrearDireccionComponent } from './Components/direccion/crear-direccion/
     ControlVacunasComponent,
     PaginaPrincipalComponent,
     CrearCiudadanoComponent,
-    CrearDireccionComponent
+    CrearDireccionComponent,
+    CrearControlVacunasComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

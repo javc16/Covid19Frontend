@@ -24,4 +24,15 @@ export class ControlVacunasComponent implements OnInit {
   create(): void {
     this.router.navigate(['crearcontrolvacunas']);
   }
+
+  delete(controlVacunas:ControlVacunas) {  
+    this._controlVacunasService.delete(controlVacunas)
+      .subscribe((res: any) => {
+        this._controlVacunasService.getAll().subscribe((res: any[])=>{
+          this.controlVacunacion= res;          
+        })
+        debugger;
+        
+      });     
+  }
 }

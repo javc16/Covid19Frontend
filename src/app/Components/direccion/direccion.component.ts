@@ -24,4 +24,15 @@ export class DireccionComponent implements OnInit {
   create(): void {
     this.router.navigate(['creardireccion']);
   }
+
+  delete(direccion:Direccion) {  
+    this._direccionService.delete(direccion)
+      .subscribe((res: any) => {
+        this._direccionService.getAll().subscribe((res: any[])=>{
+          this.direcciones= res;          
+        })
+        debugger;
+        
+      });     
+  }
 }

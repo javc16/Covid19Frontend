@@ -25,4 +25,14 @@ export class CiudadanoComponent implements OnInit {
     this.router.navigate(['crearciudadano']);
   }
 
+  delete(ciudadano:Ciudadano) {  
+    this._ciudadanoService.delete(ciudadano)
+      .subscribe((res: any) => {
+        this._ciudadanoService.getAll().subscribe((res: any[])=>{
+          this.ciudadanos= res;          
+        })
+        debugger;
+        
+      });     
+  }
 }
